@@ -19,6 +19,7 @@ export default function Home() {
                 "creative\u00A0technologist",
               ]}
               duration={2500}
+              color="text-neutral-200"
             />
             <br className="text-3xl" />
             I'm Magueth, a full-stack expert crafting creative solutions.
