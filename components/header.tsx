@@ -1,5 +1,7 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -30,13 +32,19 @@ const Header = () => {
         top: 0,
         left: 0,
         right: 0,
-        backgroundColor: "white",
+        backdropFilter: "blur(10px)",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.1)",
         padding: "1rem",
         zIndex: 1000,
       }}
     >
-      <h1>Header</h1>
+      <nav>
+        <ul>
+          <li>
+            <Link href="/">Home </Link>
+          </li>
+        </ul>
+      </nav>
     </motion.div>
   );
 };

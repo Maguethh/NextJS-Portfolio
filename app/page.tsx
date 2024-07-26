@@ -23,8 +23,8 @@ export default function Home() {
           }}
           className="absolute left-[10vw]"
         >
-          <div className="flex flex-col 2xl:gap-[40px]">
-            <div className="font-bold 2xl:text-5xl">
+          <div className="flex flex-col 2xl:gap-40px xl:gap-25px">
+            <div className="font-bold 2xl:text-5xl xl:text-4xl">
               <span className="mb-3 block">
                 Start collaborating with your next
               </span>
@@ -39,7 +39,7 @@ export default function Home() {
                 color="text-neutral-200"
               />
             </div>
-            <div className="font-extralight 2xl:text-2xl">
+            <div className="font-extralight 2xl:text-2xl xl:text-xl">
               A full-stack expert crafting creative solutions.
             </div>
           </div>
