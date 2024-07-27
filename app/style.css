@@ -1,0 +1,27 @@
+.home-hero-motion-div {
+  position: absolute;
+  left: 10vw;
+}
+
+.home-hero-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.home-hero-text {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@media (min-width: 1280px) {
+  .home-hero-text {
+    font-size: 40px;
+    line-height: 2.5rem;
+  }
+
+  .home-hero-text-container {
+    gap: 25px;
+  }
+}

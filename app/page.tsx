@@ -4,11 +4,21 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-import EmblaCarousel from "@/components/cards-carousel";
-
+import EmblaCarousel from "@/components/embla-carousel";
+import "./style.css";
 const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB. I'm always looking for new challenges and opportunities to learn and grow. Let's work together to bring your ideas to life'
 `;
-
+const slides = [
+  { index: 0, title: "You can do more with AI", subtitle: "Personnal Project" },
+  {
+    index: 1,
+    title: "My Hotel Project Platform",
+    subtitle: "Professional Project",
+  },
+  { index: 2, title: "Comments Analyzer API", subtitle: "Personal Project" },
+  { index: 3, title: "Slide 4", subtitle: "Subtitle 4" },
+  { index: 4, title: "Slide 5", subtitle: "Subtitle 5" },
+];
 export default function Home() {
   return (
     <>
@@ -21,10 +31,10 @@ export default function Home() {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="absolute left-[10vw]"
+          className="home-hero-motion-div"
         >
-          <div className="flex flex-col 2xl:gap-40px xl:gap-25px">
-            <div className="font-bold 2xl:text-5xl xl:text-4xl">
+          <div className="home-hero-text-container">
+            <div className="home-hero-text">
               <span className="mb-3 block">
                 Start collaborating with your next
               </span>
@@ -52,19 +62,11 @@ export default function Home() {
             colorClass="text-neutral-200"
           />
         </div>
-        <div className="w-[80vw] h-[700px] bg-neutral-100/[0.05] rounded p-10 mx-auto flex gap-2 ">
-          <div className="w-1/5 bg-neutral-100"></div>
-          <div className="w-1/5 bg-neutral-100"></div>
-
-          <div className="w-1/5 bg-neutral-100"></div>
-
-          <div className="w-1/5 bg-neutral-100"></div>
-
-          <div className="w-1/5 bg-neutral-100"></div>
+        <div className="h-full">
+          <div className="w-[80%] mx-auto">
+            <EmblaCarousel slides={slides} />
+          </div>
         </div>
-      </div>
-      <div className="h-[100vh] flex p-52">
-        <EmblaCarousel slides={[1, 2, 3, 4, 5]} />
       </div>
     </>
   );

@@ -1,11 +1,22 @@
 import React from "react";
 import { EmblaOptionsType } from "embla-carousel";
-import { DotButton, useDotButton } from "@/components/cards-carousel-dot";
+import { DotButton, useDotButton } from "@/components/embla-dot-button";
+import {
+  PrevButton,
+  NextButton,
+  usePrevNextButtons,
+} from "@/components/embla-carousel-arrow-button";
 import useEmblaCarousel from "embla-carousel-react";
-import "./cards-carousel.css";
+import "@/components/embla-style.css";
+
+type SlideType = {
+  index: number;
+  title: string;
+  subtitle: string;
+};
 
 type PropType = {
-  slides: number[];
+  slides: SlideType[];
   options?: EmblaOptionsType;
 };
 
@@ -16,14 +27,23 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);
 
+  const {
+    prevBtnDisabled,
+    nextBtnDisabled,
+    onPrevButtonClick,
+    onNextButtonClick,
+  } = usePrevNextButtons(emblaApi);
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__inner">
-                <div className="embla__slide__number">{index + 1}</div>
+          {slides.map((slide) => (
+            <div className="embla__slide" key={slide.index}>
+              <div className="embla__slide__content">
+                <div className="embla__slide__title">{slide.title}</div>
+                <div className="embla__slide__subtitle">{slide.subtitle}</div>
+                <div className="embla__slide__number">{slide.index + 1}</div>
               </div>
             </div>
           ))}
@@ -31,6 +51,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       </div>
 
       <div className="embla__controls">
+        <div className="embla__buttons">
+          <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
+          <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
+        </div>
+
         <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
