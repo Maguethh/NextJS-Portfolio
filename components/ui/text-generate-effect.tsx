@@ -87,7 +87,7 @@ export const TextGenerateEffect = ({
     <div className={cn("font-bold", className)} ref={containerRef}>
       <div className="mt-4">
         <div
-          className={`text-2xl leading-snug tracking-wide ${colorClass}`} // Application de la classe Tailwind CSS
+          className={`text-3xl leading-snug tracking-wide ${colorClass}`} // Application de la classe Tailwind CSS
           data-aos="fade-up" // Attribut AOS pour l'animation
         >
           {renderWords()}

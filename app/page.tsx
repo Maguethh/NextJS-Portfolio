@@ -4,11 +4,11 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
-const inter = Inter({
-  subsets: ["latin"],
-});
+import EmblaCarousel from "@/components/cards-carousel";
+
 const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB. I'm always looking for new challenges and opportunities to learn and grow. Let's work together to bring your ideas to life'
 `;
+
 export default function Home() {
   return (
     <>
@@ -45,13 +45,26 @@ export default function Home() {
           </div>
         </motion.div>
       </AuroraBackground>
-      <div className="h-screen">
-        <div className="w-50pc absolute left-[10vw]">
+      <div className="h-screen flex flex-col gap-20">
+        <div className="w-[60vw] ml-[10vw]">
           <TextGenerateEffect
             words={presentation}
             colorClass="text-neutral-200"
           />
         </div>
+        <div className="w-[80vw] h-[700px] bg-neutral-100/[0.05] rounded p-10 mx-auto flex gap-2 ">
+          <div className="w-1/5 bg-neutral-100"></div>
+          <div className="w-1/5 bg-neutral-100"></div>
+
+          <div className="w-1/5 bg-neutral-100"></div>
+
+          <div className="w-1/5 bg-neutral-100"></div>
+
+          <div className="w-1/5 bg-neutral-100"></div>
+        </div>
+      </div>
+      <div className="h-[100vh] flex p-52">
+        <EmblaCarousel slides={[1, 2, 3, 4, 5]} />
       </div>
     </>
   );
