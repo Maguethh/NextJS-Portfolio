@@ -1,35 +1,12 @@
 "use client";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FlipWords } from "@/components/ui/flip-words";
-import { Inter } from "next/font/google";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import EmblaCarousel from "@/components/embla-carousel";
 import "./style.css";
-const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB. I'm always looking for new challenges and opportunities to learn and grow. Let's work together to bring your ideas to life'
-`;
-const slides = [
-  { index: 0, title: "You can do more with AI", subtitle: "Personnal Project" },
-  {
-    index: 1,
-    title: "My Hotel Project Platform",
-    subtitle: "Professional Project",
-    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
-    images: [
-      "https://via.placeholder.com/100x100.png?text=Image+1",
-      "https://via.placeholder.com/100x100.png?text=Image+2",
-      "https://via.placeholder.com/100x100.png?text=Image+3",
-    ],
-  },
-  {
-    index: 2,
-    title: "Comments Analyzer API",
-    subtitle: "Personal Project",
-    thumbnail: "url('https://source.unsplash.com/random')",
-  },
-  { index: 3, title: "Slide 4", subtitle: "Subtitle 4" },
-  { index: 4, title: "Slide 5", subtitle: "Subtitle 5" },
-];
+import { presentation, slides } from "@/data/data";
+
 export default function Home() {
   return (
     <>
