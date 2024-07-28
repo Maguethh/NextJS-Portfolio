@@ -43,12 +43,13 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           {slides.map((slide) => (
             <div className="embla__slide" key={slide.index}>
               <div
-                className="embla__slide__content"
-                style={{ background: slide.thumbnail }}
+                className="slidebackground"
+                style={{ backgroundImage: `url(${slide.thumbnail})` }}
               >
-                <div className="embla__slide__title">{slide.title}</div>
-                <div className="embla__slide__subtitle">{slide.subtitle}</div>
-                <div className="embla__slide__number">{slide.index + 1}</div>
+                <div className="embla__slide__content">
+                  <div className="embla__slide__title">{slide.title}</div>
+                  <div className="embla__slide__subtitle">{slide.subtitle}</div>
+                </div>
               </div>
             </div>
           ))}

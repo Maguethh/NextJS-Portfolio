@@ -14,6 +14,12 @@ const slides = [
     index: 1,
     title: "My Hotel Project Platform",
     subtitle: "Professional Project",
+    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
+    images: [
+      "https://via.placeholder.com/100x100.png?text=Image+1",
+      "https://via.placeholder.com/100x100.png?text=Image+2",
+      "https://via.placeholder.com/100x100.png?text=Image+3",
+    ],
   },
   {
     index: 2,
