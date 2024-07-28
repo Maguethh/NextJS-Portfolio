@@ -2,6 +2,16 @@
   position: absolute;
   left: 10vw;
 }
+.home-hero-text-1 {
+  margin-bottom: 0.75rem;
+  display: block;
+}
+
+.home-hero-text-2 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
 
 .home-hero-text-container {
   display: flex;
@@ -11,8 +21,16 @@
 
 .home-hero-text {
   font-weight: bold;
-  font-size: 48px;
+  font-size: 3rem;
   line-height: 1;
+}
+
+.home-about-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 200px;
+  gap: 40px;
 }
 
 @media (min-width: 1280px) {
@@ -23,5 +41,10 @@
 
   .home-hero-text-container {
     gap: 25px;
+  }
+
+  .home-hero-text-2 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 }

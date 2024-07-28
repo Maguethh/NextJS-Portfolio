@@ -13,6 +13,8 @@ type SlideType = {
   index: number;
   title: string;
   subtitle: string;
+  thumbnail: string;
+  images: string[];
 };
 
 type PropType = {
@@ -40,7 +42,10 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((slide) => (
             <div className="embla__slide" key={slide.index}>
-              <div className="embla__slide__content">
+              <div
+                className="embla__slide__content"
+                style={{ background: slide.thumbnail }}
+              >
                 <div className="embla__slide__title">{slide.title}</div>
                 <div className="embla__slide__subtitle">{slide.subtitle}</div>
                 <div className="embla__slide__number">{slide.index + 1}</div>

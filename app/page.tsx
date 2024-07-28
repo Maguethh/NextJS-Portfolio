@@ -15,7 +15,12 @@ const slides = [
     title: "My Hotel Project Platform",
     subtitle: "Professional Project",
   },
-  { index: 2, title: "Comments Analyzer API", subtitle: "Personal Project" },
+  {
+    index: 2,
+    title: "Comments Analyzer API",
+    subtitle: "Personal Project",
+    thumbnail: "url('https://source.unsplash.com/random')",
+  },
   { index: 3, title: "Slide 4", subtitle: "Subtitle 4" },
   { index: 4, title: "Slide 5", subtitle: "Subtitle 5" },
 ];
@@ -35,7 +40,7 @@ export default function Home() {
         >
           <div className="home-hero-text-container">
             <div className="home-hero-text">
-              <span className="mb-3 block">
+              <span className="home-hero-text-1">
                 Start collaborating with your next
               </span>
               <FlipWords
@@ -49,13 +54,13 @@ export default function Home() {
                 color="text-neutral-200"
               />
             </div>
-            <div className="font-extralight 2xl:text-2xl xl:text-xl">
+            <div className="home-hero-text-2">
               A full-stack expert crafting creative solutions.
             </div>
           </div>
         </motion.div>
       </AuroraBackground>
-      <div className="h-screen flex flex-col gap-20">
+      <div className="home-about-section">
         <div className="w-[60vw] ml-[10vw]">
           <TextGenerateEffect
             words={presentation}
