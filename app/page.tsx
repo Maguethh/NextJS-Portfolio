@@ -4,9 +4,18 @@ import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
 import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import EmblaCarousel from "@/components/embla-carousel";
-import "./style.css";
 import { presentation, slides } from "@/data/data";
 import TiltStack from "@/components/tilt-stack";
+import Link from "next/link";
+import {
+  SiGithub,
+  SiLinkedin,
+  SiTwitter,
+  SiDiscord,
+  SiSpotify,
+} from "react-icons/si";
+import "./style.css";
+import IconLink from "@/components/icon-link";
 
 export default function Home() {
   return (
@@ -51,6 +60,13 @@ export default function Home() {
               words={presentation}
               colorClass="text-neutral-200"
             />
+            <div className="contact-list-container">
+              <IconLink href="/contact" icon={SiGithub} tooltip="GitHub" />
+              <IconLink href="/contact" icon={SiLinkedin} tooltip="LinkedIn" />
+              <IconLink href="/contact" icon={SiTwitter} tooltip="Twitter" />
+              <IconLink href="/contact" icon={SiDiscord} tooltip="Discord" />
+              <IconLink href="/contact" icon={SiSpotify} tooltip="Spotify" />
+            </div>
           </div>
           <div className="home-tilt-container">
             <TiltStack />

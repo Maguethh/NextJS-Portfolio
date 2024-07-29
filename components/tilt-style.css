@@ -3,9 +3,11 @@
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: lef;
+  align-items: center;
   padding: 40px;
   backdrop-filter: blur(4px);
+  transition: transform 0.3s ease;
+  position: relative;
 }
 
 .tilt {
@@ -41,7 +43,7 @@
   cursor: pointer;
   border: solid 1px rgb(148, 148, 148);
   border-radius: 10px;
-  transition: 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .grid-item:hover {
@@ -50,7 +52,7 @@
 
 .grid-tooltip {
   position: absolute;
-  top: -20px;
+  top: -15px;
   left: 50%;
   transform: translateX(-50%);
   background-color: rgba(48, 48, 48, 0.575);
@@ -59,7 +61,7 @@
   border-radius: 30px;
   pointer-events: none;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
   width: 50%;
   text-align: center;
   perspective: 1000;

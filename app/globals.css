@@ -24,3 +24,13 @@ body {
     text-wrap: balance;
   }
 }
+
+::selection {
+  background-color: white;
+  color: rgb(var(--background-rgb));
+}
+
+::-moz-selection {
+  background-color: white;
+  color: rgb(var(--background-rgb));
+}

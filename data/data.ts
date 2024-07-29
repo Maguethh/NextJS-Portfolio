@@ -1,7 +1,7 @@
 const image1 = "/images/IMG1.png";
 
 // Text Generate Words
-export const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB. I'm always looking for new challenges and opportunities to learn and grow. Let's work together to bring your ideas to life`;
+export const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB.`;
 
 // Slide Carousel Cards
 export const slides = [
@@ -9,7 +9,7 @@ export const slides = [
     index: 0,
     title: "You can do more with AI",
     subtitle: "Personal Project",
-    thumbnail: image1,
+    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
     images: [
       "https://via.placeholder.com/100x100.png?text=Image+1",
       "https://via.placeholder.com/100x100.png?text=Image+2",

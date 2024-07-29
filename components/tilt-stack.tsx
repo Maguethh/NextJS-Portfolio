@@ -14,10 +14,15 @@ import {
 } from "react-icons/si";
 import "./tilt-style.css";
 
-const TiltStack = () => {
-  const [tooltipText, setTooltipText] = useState("");
+interface GridItem {
+  name: string;
+  icon: JSX.Element;
+}
 
-  const gridItems = [
+const TiltStack: React.FC = () => {
+  const [tooltipText, setTooltipText] = useState<string>("");
+
+  const gridItems: GridItem[] = [
     { name: "React", icon: <SiReact /> },
     { name: "JavaScript", icon: <SiJavascript /> },
     { name: "TypeScript", icon: <SiTypescript /> },
@@ -30,7 +35,7 @@ const TiltStack = () => {
     { name: "TailwindCSS", icon: <SiTailwindcss /> },
   ];
 
-  const handleMouseEnter = (text) => {
+  const handleMouseEnter = (text: string) => {
     setTooltipText(text);
   };
 
