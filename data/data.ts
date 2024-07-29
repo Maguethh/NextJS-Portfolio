@@ -1,4 +1,4 @@
-import { image1 } from "@/assets/images/IMG1.png";
+const image1 = "/images/IMG1.png";
 
 // Text Generate Words
 export const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB. I'm always looking for new challenges and opportunities to learn and grow. Let's work together to bring your ideas to life`;
@@ -9,7 +9,7 @@ export const slides = [
     index: 0,
     title: "You can do more with AI",
     subtitle: "Personal Project",
-    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
+    thumbnail: image1,
     images: [
       "https://via.placeholder.com/100x100.png?text=Image+1",
       "https://via.placeholder.com/100x100.png?text=Image+2",
@@ -51,6 +51,28 @@ export const slides = [
   },
   {
     index: 4,
+    title: "Slide 5",
+    subtitle: "Subtitle 5",
+    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
+    images: [
+      "https://via.placeholder.com/100x100.png?text=Image+1",
+      "https://via.placeholder.com/100x100.png?text=Image+2",
+      "https://via.placeholder.com/100x100.png?text=Image+3",
+    ],
+  },
+  {
+    index: 5,
+    title: "Slide 5",
+    subtitle: "Subtitle 5",
+    thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",
+    images: [
+      "https://via.placeholder.com/100x100.png?text=Image+1",
+      "https://via.placeholder.com/100x100.png?text=Image+2",
+      "https://via.placeholder.com/100x100.png?text=Image+3",
+    ],
+  },
+  {
+    index: 6,
     title: "Slide 5",
     subtitle: "Subtitle 5",
     thumbnail: "https://via.placeholder.com/800x400.png?text=Thumbnail",

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import { DotButton, useDotButton } from "@/components/embla-dot-button";
 import {
@@ -24,7 +24,32 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
-  const [emblaRef, emblaApi] = useEmblaCarousel(options);
+  const [slidesToScroll, setSlidesToScroll] = useState(4);
+
+  useEffect(() => {
+    const updateSlidesToScroll = () => {
+      if (window.innerWidth <= 768) {
+        setSlidesToScroll(1);
+      } else if (window.innerWidth <= 1024) {
+        setSlidesToScroll(2);
+      } else if (window.innerWidth <= 1536) {
+        setSlidesToScroll(3);
+      } else {
+        setSlidesToScroll(4);
+      }
+    };
+
+    window.addEventListener("resize", updateSlidesToScroll);
+    updateSlidesToScroll(); // Initial call
+
+    return () => window.removeEventListener("resize", updateSlidesToScroll);
+  }, []);
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    ...options,
+    slidesToScroll,
+    containScroll: "trimSnaps",
+  });
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi);

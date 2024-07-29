@@ -1,9 +1,9 @@
 .embla {
   width: 100%;
   margin: auto;
-  --slide-height: 36rem;
-  --slide-spacing: 1rem;
-  --slide-size: 33.3%;
+  --slide-height: 30rem;
+  --slide-spacing: 2rem;
+  --slide-size: 25%; /* 25% for 4 slides per view */
 }
 
 .embla__viewport {
@@ -39,6 +39,20 @@
   background-size: cover;
   background-position: center;
   cursor: pointer;
+  overflow: hidden; /* Ensure the zoom effect doesn't overflow */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+}
+
+.slidebackground img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the entire slide */
+  object-position: center; /* Center the image */
+  transition: transform 0.3s ease-in-out; /* Smooth zoom transition */
+}
+
+.slidebackground:hover img {
+  transform: scale(1.1); /* Zoom in on hover */
 }
 
 .embla__slide__content {
@@ -136,7 +150,7 @@
 }
 
 .embla__slide__title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 0.5rem;
   position: absolute;
   top: 70px;
@@ -146,11 +160,29 @@
 }
 
 .embla__slide__subtitle {
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   color: rgb(247, 247, 247);
   margin-bottom: 1rem;
   position: absolute;
   top: 40px;
   left: 50px;
+}
+
+@media (max-width: 1536px) {
+  .embla {
+    --slide-size: 33.33%; /* 33.33% for 3 slides per view */
+  }
+}
+
+@media (max-width: 1024px) {
+  .embla {
+    --slide-size: 50%; /* 50% for 2 slides per view */
+  }
+}
+
+@media (max-width: 768px) {
+  .embla {
+    --slide-size: 100%; /* 100% for 1 slide per view */
+  }
 }

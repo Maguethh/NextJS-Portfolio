@@ -6,6 +6,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 import EmblaCarousel from "@/components/embla-carousel";
 import "./style.css";
 import { presentation, slides } from "@/data/data";
+import TiltStack from "@/components/tilt-stack";
 
 export default function Home() {
   return (
@@ -44,14 +45,20 @@ export default function Home() {
         </motion.div>
       </AuroraBackground>
       <div className="home-about-section">
-        <div className="w-[60vw] ml-[10vw]">
-          <TextGenerateEffect
-            words={presentation}
-            colorClass="text-neutral-200"
-          />
+        <div className="home-about-section-content-1">
+          <div className="home-about-section-text">
+            <TextGenerateEffect
+              words={presentation}
+              colorClass="text-neutral-200"
+            />
+          </div>
+          <div className="home-tilt-container">
+            <TiltStack />
+          </div>
+          <div className="hhome-about-section-stack"></div>
         </div>
         <div className="h-full">
-          <div className="w-[80%] mx-auto">
+          <div className="home-carousel-container">
             <EmblaCarousel slides={slides} />
           </div>
         </div>

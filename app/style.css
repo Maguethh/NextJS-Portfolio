@@ -2,27 +2,24 @@
   position: absolute;
   left: 10vw;
 }
+
 .home-hero-text-1 {
-  margin-bottom: 0.75rem;
   display: block;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: bold;
 }
 
 .home-hero-text-2 {
   font-weight: 200;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
 }
 
 .home-hero-text-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-}
-
-.home-hero-text {
-  font-weight: bold;
-  font-size: 3rem;
-  line-height: 1;
+  gap: 30px;
 }
 
 .home-about-section {
@@ -33,7 +30,34 @@
   gap: 200px;
 }
 
-@media (min-width: 1280px) {
+.home-about-section-content-1 {
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.home-about-section-text {
+  width: 60%;
+}
+
+.home-carousel-container {
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+
+.home-generate-text {
+  font-size: 1.8rem;
+}
+
+.home-tilt-container {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+@media (max-width: 1280px) {
   .home-hero-text {
     font-size: 40px;
     line-height: 2.5rem;
