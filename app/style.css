@@ -76,18 +76,23 @@
   scale: 1.1;
 }
 
-@media (max-width: 1280px) {
-  .home-hero-text {
-    font-size: 40px;
-    line-height: 2.5rem;
+@media (max-width: 1536px) {
+  .home-hero-text-container {
+    gap: 30px;
   }
 
-  .home-hero-text-container {
-    gap: 25px;
+  .home-hero-text-1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
   }
 
   .home-hero-text-2 {
     font-size: 1.25rem;
     line-height: 1.75rem;
+  }
+
+  .home-generate-text {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
 }
