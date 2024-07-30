@@ -33,17 +33,15 @@ const EmblaModalCarousel: React.FC<PropType> = (props) => {
     resetOrStop();
   }, []);
 
-  const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(
-    emblaApi,
-    onNavButtonClick
-  );
+  const { selectedIndex, scrollSnaps, onDotButtonClick } =
+    useDotButton(emblaApi);
 
   const {
     prevBtnDisabled,
     nextBtnDisabled,
     onPrevButtonClick,
     onNextButtonClick,
-  } = usePrevNextButtons(emblaApi, onNavButtonClick);
+  } = usePrevNextButtons(emblaApi);
 
   return (
     <section className="embla__modal">
