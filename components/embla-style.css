@@ -156,6 +156,7 @@
   left: 50px;
   font-weight: 500;
   width: 60%;
+  text-shadow: 1px 1px 2px rgb(129, 129, 129);
 }
 
 .embla__slide__subtitle {
@@ -171,6 +172,18 @@
 @media (max-width: 1536px) {
   .embla {
     --slide-size: 33.33%;
+    --slide-height: 30rem;
+    --slide-spacing: 1.5rem;
+  }
+
+  .embla__slide__title {
+    top: 60px;
+    left: 50px;
+  }
+
+  .embla__slide__subtitle {
+    top: 30px;
+    left: 50px;
   }
 }
 
