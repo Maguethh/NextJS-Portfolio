@@ -115,7 +115,7 @@ const config: Config = {
         };
       }
 
-      addUtilities(newUtilities, ["responsive", "hover"]);
+      addUtilities(newUtilities);
     }),
   ],
 };
