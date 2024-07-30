@@ -88,7 +88,6 @@ export const TextGenerateEffect = ({
       <div className="mt-4">
         <div
           className={`leading-snug tracking-wide ${colorClass} home-generate-text`} // Application de la classe Tailwind CSS
-          data-aos="fade-up" // Attribut AOS pour l'animation
         >
           {renderWords()}
         </div>

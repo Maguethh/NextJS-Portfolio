@@ -7,6 +7,7 @@ import EmblaCarousel from "@/components/embla-carousel";
 import { presentation, slides } from "@/data/data";
 import TiltStack from "@/components/tilt-stack";
 import Link from "next/link";
+import AOS from "aos";
 import {
   SiGithub,
   SiLinkedin,
@@ -54,7 +55,7 @@ export default function Home() {
         </motion.div>
       </AuroraBackground>
       <div className="home-about-section">
-        <div className="home-about-section-content-1">
+        <div className="home-about-section-content-1" data-aos="fade-up">
           <div className="home-about-section-text">
             <TextGenerateEffect
               words={presentation}
