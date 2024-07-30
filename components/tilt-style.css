@@ -8,22 +8,6 @@
   backdrop-filter: blur(4px);
   transition: transform 0.3s ease;
   position: relative;
-  animation: tiltIdle 5s infinite ease-in-out;
-}
-@keyframes tiltIdle {
-  0%,
-  100% {
-    transform: rotate3d(1, 1, 0, 0deg);
-  }
-  25% {
-    transform: rotate3d(1, 1, 0, 2deg);
-  }
-  50% {
-    transform: rotate3d(1, 1, 0, -2deg);
-  }
-  75% {
-    transform: rotate3d(1, 1, 0, 2deg);
-  }
 }
 
 .tilt {
