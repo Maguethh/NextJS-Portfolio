@@ -119,27 +119,27 @@ export const slides = [
     ],
     stack: [
       {
-        href: "https://example.com",
+        href: "https://developer.mozilla.org/fr/docs/Web/CSS/Reference",
         icon: SiCss3,
         tooltip: "CSS",
       },
       {
-        href: "https://another-example.com",
+        href: "https://getbootstrap.com/",
         icon: SiBootstrap,
         tooltip: "Bootstrap",
       },
       {
-        href: "https://another-example.com",
+        href: "https://tailwindcss.com/",
         icon: SiTailwindcss,
         tooltip: "Tailwind CSS",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.figma.com/",
         icon: SiFigma,
         tooltip: "Figma",
       },
       {
-        href: "https://another-example.com",
+        href: "https;//dribbble.com/",
         icon: SiDribbble,
         tooltip: "Dribbble",
       },
@@ -163,22 +163,22 @@ export const slides = [
     ],
     stack: [
       {
-        href: "https://example.com",
+        href: "https://www.python.org/",
         icon: SiPython,
         tooltip: "Python",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.djangoproject.com/",
         icon: SiDjango,
         tooltip: "Django",
       },
       {
-        href: "https://another-example.com",
+        href: "https://htmx.org/",
         icon: SiHtmx,
         tooltip: "HTMX",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.mysql.com/",
         icon: SiMysql,
         tooltip: "MySQL",
       },
@@ -200,22 +200,22 @@ export const slides = [
     ],
     stack: [
       {
-        href: "https://example.com",
+        href: "https://developer.apple.com/swift/",
         icon: SiSwift,
         tooltip: "Swift",
       },
       {
-        href: "https://another-example.com",
+        href: "https://firebase.google.com/",
         icon: SiFirebase,
         tooltip: "Firebase",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.mapbox.com/",
         icon: SiMapbox,
         tooltip: "Mapbox",
       },
       {
-        href: "https://another-example.com",
+        href: "https://developer.apple.com/ios/",
         icon: SiApple,
         tooltip: "IOS",
       },
@@ -237,24 +237,24 @@ export const slides = [
     ],
     stack: [
       {
-        href: "https://example.com",
+        href: "https://reactnative.dev/",
         icon: SiReact,
         tooltip: "React Native",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.npmjs.com/",
         icon: SiNpm,
         tooltip: "NPM",
       },
       {
-        href: "https://another-example.com",
+        href: "https://docs.expo.dev/",
         icon: SiExpo,
         tooltip: "Expo",
       },
       {
-        href: "https://another-example.com",
+        href: "https://www.typescriptlang.org/",
         icon: SiTypescript,
-        tooltip: "TypeScript",
+        tooltip: "",
       },
     ],
   },
