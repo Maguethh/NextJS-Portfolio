@@ -95,7 +95,7 @@ export default function Home() {
           <div className="hhome-about-section-stack"></div>
         </div>
         <div className="h-full">
-          <div className="home-carousel-container">
+          <div className="home-carousel-container" data-aos="fade-up">
             <EmblaCarousel slides={slides} />
           </div>
         </div>
