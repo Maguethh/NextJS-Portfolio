@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
 import "./card-modal-style.css";
 import { X } from "lucide-react";
 import EmblaModalCarousel from "@/components/embla-modal-carousel"; // Import the carousel component
@@ -40,7 +41,7 @@ const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, slide }) => {
 
   if (!isOpen || !slide) return null;
 
-  return (
+  return ReactDOM.createPortal(
     <div className="card-modal-overlay" onClick={onClose}>
       <div className="card-modal" onClick={(e) => e.stopPropagation()}>
         <div className="card-modal-informations">
@@ -73,7 +74,8 @@ const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, slide }) => {
           </div>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
 
