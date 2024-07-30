@@ -4,7 +4,7 @@ import { X } from "lucide-react";
 import EmblaModalCarousel from "@/components/embla-modal-carousel"; // Import the carousel component
 import IconLink from "@/components/icon-link"; // Import the IconLink component
 
-type SlideType = {
+type SlideTypeCardModal = {
   index: number;
   title: string;
   subtitle: string;
@@ -22,7 +22,7 @@ type SlideType = {
 type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
-  slide: SlideType | null;
+  slide: SlideTypeCardModal | null;
 };
 
 const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, slide }) => {
