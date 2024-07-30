@@ -10,16 +10,23 @@ import useEmblaCarousel from "embla-carousel-react";
 import CardModal from "@/components/card-modal";
 import "@/components/embla-style.css";
 
-type SlideTypeCarousel = {
+type SlideType = {
   index: number;
   title: string;
   subtitle: string;
   thumbnail: string;
   images: string[];
+  textTitle: string;
+  textParagraphs: string[];
+  stack: {
+    href: string;
+    icon: React.ElementType;
+    tooltip: string;
+  }[];
 };
 
 type PropType = {
-  slides: SlideTypeCarousel[];
+  slides: SlideType[];
   options?: EmblaOptionsType;
 };
 
@@ -27,9 +34,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [slidesToScroll, setSlidesToScroll] = useState(4);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedSlide, setSelectedSlide] = useState<SlideTypeCarousel | null>(
-    null
-  );
+  const [selectedSlide, setSelectedSlide] = useState<SlideType | null>(null);
 
   useEffect(() => {
     const updateSlidesToScroll = () => {
@@ -45,7 +50,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     };
 
     window.addEventListener("resize", updateSlidesToScroll);
-    updateSlidesToScroll();
+    updateSlidesToScroll(); // Initial call
 
     return () => window.removeEventListener("resize", updateSlidesToScroll);
   }, []);
@@ -66,7 +71,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
-  const openModal = (slide: SlideTypeCarousel) => {
+  const openModal = (slide: SlideType) => {
     setSelectedSlide(slide);
     setIsModalOpen(true);
   };
