@@ -96,3 +96,24 @@
     line-height: 2.5rem;
   }
 }
+
+@media (max-width: 1280px) {
+  .home-about-section {
+    gap: 150px;
+  }
+
+  .home-generate-text {
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .home-generate-text {
+    font-size: 1.1rem;
+    line-height: 2rem;
+  }
+
+  .home-about-section-text {
+    width: 100%;
+  }
+}

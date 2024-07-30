@@ -76,3 +76,39 @@
 .grid-icon {
   font-size: 45px;
 }
+
+@media (max-width: 1280px) {
+  .tilt {
+    min-width: 300px;
+    min-height: 300px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .grid-tooltip {
+    top: -10px;
+  }
+}
+
+@media (max-width: 1080px) {
+  .tilt {
+    min-width: 250px;
+    min-height: 250px;
+    width: 250px;
+    height: 250px;
+  }
+
+  .tilt-container {
+    padding: 20px;
+  }
+
+  .grid-item {
+    font-size: 25px;
+    flex: 1 1 calc(33.333% - 20px);
+  }
+
+  .grid-tooltip {
+    top: -20px;
+    font-size: 0.8rem;
+  }
+}
