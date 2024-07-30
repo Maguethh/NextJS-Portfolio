@@ -189,12 +189,7 @@ export const slides = [
     title: "Spark Mobile Applicaton",
     subtitle: "Personal Project",
     thumbnail: "/images/spark-thumbnail.png",
-    images: [
-      "/images/spark1.png",
-      "/images/spark2.png",
-      "/images/spark3.png",
-      "/images/spark4.png",
-    ],
+    images: ["/images/spark1.png", "/images/spark2.png", "/images/spark3.png"],
     textTitle: "Detailed Information",
     textParagraphs: [
       "I am currently developing my own mobile application called Spark, which aims to revolutionize the event management industry. Spark is an open-source project, with the iOS version being built using Swift and Firebase. The app is designed to be the ultimate event companion, allowing users to see real-time events happening around them, create their own events, and communicate with other users through chat rooms.",
