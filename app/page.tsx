@@ -61,11 +61,31 @@ export default function Home() {
               colorClass="text-neutral-200"
             />
             <div className="contact-list-container">
-              <IconLink href="/contact" icon={SiGithub} tooltip="GitHub" />
-              <IconLink href="/contact" icon={SiLinkedin} tooltip="LinkedIn" />
-              <IconLink href="/contact" icon={SiTwitter} tooltip="Twitter" />
-              <IconLink href="/contact" icon={SiDiscord} tooltip="Discord" />
-              <IconLink href="/contact" icon={SiSpotify} tooltip="Spotify" />
+              <IconLink
+                href="https://github.com/Maguethh"
+                icon={SiGithub}
+                tooltip="GitHub"
+              />
+              <IconLink
+                href="https://www.linkedin.com/in/magueth-pastor-b40851284/"
+                icon={SiLinkedin}
+                tooltip="LinkedIn"
+              />
+              <IconLink
+                href="https://x.com/NMagueth"
+                icon={SiTwitter}
+                tooltip="Twitter"
+              />
+              <IconLink
+                href="https://discord.com/users/224217349782241280"
+                icon={SiDiscord}
+                tooltip="Discord"
+              />
+              <IconLink
+                href="https://open.spotify.com/user/30ei7ldg4nhkbqy1c6dyek7q5?si=344bcbe0170c4022"
+                icon={SiSpotify}
+                tooltip="Spotify"
+              />
             </div>
           </div>
           <div className="home-tilt-container">

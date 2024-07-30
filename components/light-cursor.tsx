@@ -30,7 +30,7 @@ const LightCursor: React.FC = () => {
         pointerEvents: "none",
         mixBlendMode: "overlay",
         transition: "transform 0.1s ease-out",
-        zIndex: 1,
+        zIndex: 2000,
       }}
     />
   );

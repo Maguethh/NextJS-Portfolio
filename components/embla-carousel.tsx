@@ -7,6 +7,7 @@ import {
   usePrevNextButtons,
 } from "@/components/embla-carousel-arrow-button";
 import useEmblaCarousel from "embla-carousel-react";
+import CardModal from "@/components/card-modal";
 import "@/components/embla-style.css";
 
 type SlideType = {
@@ -25,6 +26,8 @@ type PropType = {
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { slides, options } = props;
   const [slidesToScroll, setSlidesToScroll] = useState(4);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedSlide, setSelectedSlide] = useState<SlideType | null>(null);
 
   useEffect(() => {
     const updateSlidesToScroll = () => {
@@ -61,12 +64,26 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     onNextButtonClick,
   } = usePrevNextButtons(emblaApi);
 
+  const openModal = (slide: SlideType) => {
+    setSelectedSlide(slide);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedSlide(null);
+  };
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((slide) => (
-            <div className="embla__slide" key={slide.index}>
+            <div
+              className="embla__slide"
+              key={slide.index}
+              onClick={() => openModal(slide)}
+            >
               <div
                 className="slidebackground"
                 style={{ backgroundImage: `url(${slide.thumbnail})` }}
@@ -99,6 +116,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
       </div>
+
+      <CardModal
+        isOpen={isModalOpen}
+        onClose={closeModal}
+        slide={selectedSlide}
+      />
     </section>
   );
 };
