@@ -139,7 +139,7 @@ export const slides = [
         tooltip: "Figma",
       },
       {
-        href: "https;//dribbble.com/",
+        href: "https://dribbble.com/",
         icon: SiDribbble,
         tooltip: "Dribbble",
       },
