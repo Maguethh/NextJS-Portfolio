@@ -35,12 +35,12 @@ export const slides = [
     index: 0,
     title: "My Hotel Project Platform",
     subtitle: "Professionnal Project",
-    thumbnail: "/images/mhp-thumbnail.PNG",
+    thumbnail: "/images/mhp-thumbnail.png",
     images: [
-      "/images/mhp1.PNG",
-      "/images/mhp2.PNG",
-      "/images/mhp3.PNG",
-      "images/mhp4.PNG",
+      "/images/mhp1.png",
+      "/images/mhp2.png",
+      "/images/mhp3.png",
+      "images/mhp4.png",
     ],
     textTitle: "Detailed Information",
     textParagraphs: [
