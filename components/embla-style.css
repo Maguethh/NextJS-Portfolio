@@ -187,14 +187,15 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1080px) {
   .embla {
-    --slide-size: 50%;
+    --slide-height: 27rem;
   }
 }
 
 @media (max-width: 768px) {
   .embla {
     --slide-size: 100%;
+    --slide-height: 20rem;
   }
 }
