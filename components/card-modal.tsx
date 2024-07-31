@@ -2,8 +2,8 @@ import React, { useEffect } from "react";
 import ReactDOM from "react-dom";
 import "./card-modal-style.css";
 import { X } from "lucide-react";
-import EmblaModalCarousel from "@/components/embla-modal-carousel"; // Import the carousel component
-import IconLink from "@/components/icon-link"; // Import the IconLink component
+import EmblaModalCarousel from "@/components/embla-modal-carousel";
+import IconLink from "@/components/icon-link";
 
 type SlideTypeCardModal = {
   index: number;

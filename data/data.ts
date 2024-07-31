@@ -186,7 +186,7 @@ export const slides = [
   },
   {
     index: 3,
-    title: "Spark Mobile Applicaton",
+    title: "Spark Mobile Application",
     subtitle: "Personal Project",
     thumbnail: "/images/spark-thumbnail.png",
     images: ["/images/spark1.png", "/images/spark2.png", "/images/spark3.png"],
