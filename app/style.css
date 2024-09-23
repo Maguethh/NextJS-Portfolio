@@ -5,6 +5,7 @@
 
 .testttts {
   position: relative;
+  display: flex;
 }
 
 .home-hero-text-1 {
