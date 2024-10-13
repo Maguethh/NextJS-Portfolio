@@ -68,11 +68,6 @@ export default function Home() {
                 tooltip="GitHub"
               />
               <IconLink
-                href="https://www.linkedin.com/in/magueth-pastor-b40851284/"
-                icon={SiLinkedin}
-                tooltip="LinkedIn"
-              />
-              <IconLink
                 href="https://x.com/NMagueth"
                 icon={SiTwitter}
                 tooltip="Twitter"
