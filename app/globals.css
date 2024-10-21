@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-rgb: 24, 24, 27; /* #18181b in RGB */
+  --foreground-rgb: 255, 255, 255; /* Blanc */
+  --background-rgb: 24, 24, 27; /* #18181b en RGB */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-rgb: 24, 24, 27; /* #18181b in RGB */
+    --foreground-rgb: 255, 255, 255; /* Blanc */
+    --background-rgb: 24, 24, 27; /* #18181b en RGB */
   }
 }
 
@@ -43,7 +43,6 @@ body {
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
   background: #888;
-
   border-radius: 10px;
 }
 
