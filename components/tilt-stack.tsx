@@ -60,7 +60,7 @@ const TiltStack: React.FC = () => {
               className="grid-item grid-icon"
               onMouseEnter={() => handleMouseEnter(item.name)}
               onMouseLeave={handleMouseLeave}
-              whileHover={{ scale: 1.05, rotate: 5, z: 10 }}
+              whileHover={{ scale: 1.05, z: 10 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
               {item.icon}
