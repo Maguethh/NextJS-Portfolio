@@ -19,6 +19,7 @@ import {
 import "./style.css";
 import IconLink from "@/components/icon-link";
 import Tag3d from "@/components/3dtag";
+import LogoCarousel from "@/components/companies";
 
 function useIntersectionObserver(
   ref: MutableRefObject<Element | null>,
@@ -71,7 +72,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="tag3d-absolute-container">
+      <div className="tag3d-absolute-container" id="home">
         <div className="tag3d-container">
           <Tag3d />
         </div>
@@ -112,12 +113,17 @@ export default function Home() {
       <div className="home-about-section">
         <div ref={aboutSectionRef}>
           {showAboutSection && (
-            <div className="home-about-section-content-1" data-aos="fade-up">
+            <div
+              className="home-about-section-content-1"
+              data-aos="fade-up"
+              id="stack"
+            >
               <div className="home-about-section-text">
                 <TextGenerateEffect
                   words={presentation}
                   colorClass="text-neutral-200"
                 />
+
                 <div className="contact-list-container">
                   <IconLink
                     href="https://github.com/Maguethh"
@@ -146,6 +152,7 @@ export default function Home() {
                   />
                 </div>
               </div>
+
               <div className="home-tilt-container">
                 <TiltStack />
               </div>
@@ -153,7 +160,8 @@ export default function Home() {
             </div>
           )}
         </div>
-        <div className="h-full">
+        <LogoCarousel />
+        <div className="h-full" id="projects">
           <div ref={carouselRef}>
             {showCarousel && (
               <div className="home-carousel-container" data-aos="fade-up">
