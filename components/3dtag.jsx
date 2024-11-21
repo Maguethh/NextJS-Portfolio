@@ -149,6 +149,8 @@ function Band({ maxSpeed = 50, minSpeed = 10, isMobile, resetPhysics }) {
   );
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
+  const [windActive, setWindActive] = useState(false);
+  const windTimeoutRef = useRef(null);
 
   useRopeJoint(fixed, j1, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
   useRopeJoint(j1, j2, [[0, 0, 0], [0, 0, 0], 1]) // prettier-ignore
@@ -169,6 +171,17 @@ function Band({ maxSpeed = 50, minSpeed = 10, isMobile, resetPhysics }) {
       card.current.setAngvel({ x: 0, y: 0, z: 0 }, true);
     }
   }, [resetPhysics]);
+
+  useEffect(() => {
+    if (!dragged) {
+      windTimeoutRef.current = setTimeout(() => {
+        setWindActive(true);
+      }, 3000);
+    } else {
+      clearTimeout(windTimeoutRef.current);
+      setWindActive(false);
+    }
+  }, [dragged]);
 
   useFrame((state, delta) => {
     if (dragged) {
@@ -209,10 +222,31 @@ function Band({ maxSpeed = 50, minSpeed = 10, isMobile, resetPhysics }) {
       rot.copy(card.current.rotation());
       card.current.setAngvel({ x: ang.x, y: ang.y - rot.y * 0.25, z: ang.z });
     }
+
+    // Apply a slight swinging motion to simulate wind
+    if (windActive && card.current) {
+      const time = state.clock.getElapsedTime();
+      const windForce = Math.sin(time * 0.5) * 0.001;
+      card.current.applyImpulse({ x: windForce, y: 0, z: 0 }, true);
+    }
   });
 
   curve.curveType = "chordal";
   texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+
+  const handlePointerDown = (e) => {
+    e.target.setPointerCapture(e.pointerId);
+    drag(
+      new THREE.Vector3()
+        .copy(e.point)
+        .sub(vec.copy(card.current.translation()))
+    );
+  };
+
+  const handlePointerUp = (e) => {
+    e.target.releasePointerCapture(e.pointerId);
+    drag(false);
+  };
 
   return (
     <>
@@ -239,17 +273,8 @@ function Band({ maxSpeed = 50, minSpeed = 10, isMobile, resetPhysics }) {
             position={[0, -1.2, -0.05]}
             onPointerOver={() => hover(true)}
             onPointerOut={() => hover(false)}
-            onPointerUp={(e) => (
-              e.target.releasePointerCapture(e.pointerId), drag(false)
-            )}
-            onPointerDown={(e) => (
-              e.target.setPointerCapture(e.pointerId),
-              drag(
-                new THREE.Vector3()
-                  .copy(e.point)
-                  .sub(vec.copy(card.current.translation()))
-              )
-            )}
+            onPointerUp={handlePointerUp}
+            onPointerDown={handlePointerDown}
           >
             <mesh geometry={nodes.card.geometry}>
               <meshPhysicalMaterial
