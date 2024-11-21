@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, MutableRefObject } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
@@ -20,7 +20,10 @@ import "./style.css";
 import IconLink from "@/components/icon-link";
 import Tag3d from "@/components/3dtag";
 
-function useIntersectionObserver(ref, options) {
+function useIntersectionObserver(
+  ref: MutableRefObject<Element | null>,
+  options: IntersectionObserverInit
+) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
@@ -48,8 +51,8 @@ function useIntersectionObserver(ref, options) {
 }
 
 export default function Home() {
-  const aboutSectionRef = useRef(null);
-  const carouselRef = useRef(null);
+  const aboutSectionRef = useRef<HTMLDivElement | null>(null);
+  const carouselRef = useRef<HTMLDivElement | null>(null);
 
   const showAboutSection = useIntersectionObserver(aboutSectionRef, {
     threshold: 0.1,
