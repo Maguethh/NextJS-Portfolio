@@ -74,14 +74,19 @@
   align-items: center;
   justify-content: center;
   background-color: white;
-  padding: 2px;
+  padding: 5px;
   border-radius: 50%;
+  transition: 0.3s;
 }
 
 .card-modal-close-icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: rgb(41, 41, 41);
+}
+
+.card-modal-close:hover {
+  background-color: rgb(219, 219, 219);
 }
 
 .card-modal-images img {
@@ -187,8 +192,6 @@
   .card-modal-text-paragraph {
     font-size: 1.25rem;
   }
-
-  
 }
 
 /* Carousel CSS */

@@ -23,18 +23,77 @@ import {
   SiApple,
   SiExpo,
   SiNpm,
+  SiShopify,
+  SiWordpress,
+  SiMicrosoftword,
+  SiMicrosoftexcel,
+  SiMicrosoftpowerpoint,
+  SiNextdotjs,
 } from "react-icons/si";
 import { text } from "stream/consumers";
 
 // Text Generate Words
-export const presentation = `I'm a full-stack developer with a passion for creating innovative solutions. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB.`;
-
+export const presentation = `I'm a developer with a passion for creating innovative solutions. I currently hold the position of full-stack developer at Kometa, a web agency. I specialize in crafting creative solutions that are both user-friendly and visually appealing. I have experience working with a variety of technologies, including React, Node.js, and MongoDB.`;
 // Slide Carousel Cards
 export const slides = [
   {
+    index: -1,
+    title: "Kometa Web Agency Developer",
+    subtitle: "Professional Experience",
+    thumbnail: "/images/kometa-thumbnail.png",
+    images: [
+      "/images/kometa1.png",
+      "/images/kometa2.png",
+      "/images/kometa3.png",
+      "/images/kometa4.png",
+    ],
+    textTitle: "Detailed Information",
+    textParagraphs: [
+      "I am currently working as a full-stack developer at Kometa, a web agency that offers digital solutions such as 3D animation and immersive website design using Three.js.",
+
+      "At Kometa, we have had the opportunity to work with prestigious clients in the luxury and high-end market, including brands like Porsche, Valentino, Hublot, Jacquemus, and Nike. This experience has taught us the importance of attention to detail and striving for perfection in every project.",
+
+      "In my role, I am involved in various projects, including coding websites with technologies like Next.js, React, Node.js, and PHP. Additionally, I work on other projects using CMS platforms.",
+
+      "My responsibilities also include ensuring that clients understand our proposals by creating custom PowerPoint presentations. I am capable of presenting my work and explaining the technical details to clients effectively.",
+    ],
+    stack: [
+      {
+        icon: SiNextdotjs,
+        href: "https://nextjs.org/",
+        tooltip: "Next.js",
+      },
+      {
+        icon: SiTypescript,
+        href: "https://www.typescriptlang.org/",
+        tooltip: "TypeScript",
+      },
+      {
+        icon: SiJavascript,
+        href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+        tooltip: "JavaScript",
+      },
+      {
+        icon: SiWordpress,
+        href: "https://wordpress.org/",
+        tooltip: "WordPress",
+      },
+      {
+        icon: SiShopify,
+        href: "https://www.shopify.com/",
+        tooltip: "Shopify",
+      },
+      {
+        icon: SiFigma,
+        href: "https://www.figma.com/",
+        tooltip: "Figma",
+      },
+    ],
+  },
+  {
     index: 0,
     title: "My Hotel Project Platform",
-    subtitle: "Professionnal Project",
+    subtitle: "Professional Experience",
     thumbnail: "/images/mhp-thumbnail.png",
     images: [
       "/images/mhp1.png",

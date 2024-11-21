@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef, useState } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { FlipWords } from "@/components/ui/flip-words";
 import { motion } from "framer-motion";
@@ -17,10 +18,61 @@ import {
 } from "react-icons/si";
 import "./style.css";
 import IconLink from "@/components/icon-link";
+import Tag3d from "@/components/3dtag";
+
+function useIntersectionObserver(ref, options) {
+  const [isIntersecting, setIntersecting] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIntersecting(true);
+          observer.disconnect();
+        }
+      });
+    }, options);
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      if (ref.current) {
+        observer.unobserve(ref.current);
+      }
+    };
+  }, [ref, options]);
+
+  return isIntersecting;
+}
 
 export default function Home() {
+  const aboutSectionRef = useRef(null);
+  const carouselRef = useRef(null);
+
+  const showAboutSection = useIntersectionObserver(aboutSectionRef, {
+    threshold: 0.1,
+  });
+  const showCarousel = useIntersectionObserver(carouselRef, { threshold: 0.1 });
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true,
+      mirror: true,
+    });
+
+    AOS.refresh();
+  }, []);
+
   return (
     <>
+      <div className="tag3d-absolute-container">
+        <div className="tag3d-container">
+          <Tag3d />
+        </div>
+      </div>
       <AuroraBackground backgroundColor="#18181b">
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
@@ -55,43 +107,56 @@ export default function Home() {
         </motion.div>
       </AuroraBackground>
       <div className="home-about-section">
-        <div className="home-about-section-content-1" data-aos="fade-up">
-          <div className="home-about-section-text">
-            <TextGenerateEffect
-              words={presentation}
-              colorClass="text-neutral-200"
-            />
-            <div className="contact-list-container">
-              <IconLink
-                href="https://github.com/Maguethh"
-                icon={SiGithub}
-                tooltip="GitHub"
-              />
-              <IconLink
-                href="https://x.com/NMagueth"
-                icon={SiTwitter}
-                tooltip="Twitter"
-              />
-              <IconLink
-                href="https://discord.com/users/224217349782241280"
-                icon={SiDiscord}
-                tooltip="Discord"
-              />
-              <IconLink
-                href="https://open.spotify.com/user/30ei7ldg4nhkbqy1c6dyek7q5?si=344bcbe0170c4022"
-                icon={SiSpotify}
-                tooltip="Spotify"
-              />
+        <div ref={aboutSectionRef}>
+          {showAboutSection && (
+            <div className="home-about-section-content-1" data-aos="fade-up">
+              <div className="home-about-section-text">
+                <TextGenerateEffect
+                  words={presentation}
+                  colorClass="text-neutral-200"
+                />
+                <div className="contact-list-container">
+                  <IconLink
+                    href="https://github.com/Maguethh"
+                    icon={SiGithub}
+                    tooltip="GitHub"
+                  />
+                  <IconLink
+                    href="https://x.com/NMagueth"
+                    icon={SiTwitter}
+                    tooltip="Twitter"
+                  />
+                  <IconLink
+                    href="https://discord.com/users/224217349782241280"
+                    icon={SiDiscord}
+                    tooltip="Discord"
+                  />
+                  <IconLink
+                    href="https://open.spotify.com/user/30ei7ldg4nhkbqy1c6dyek7q5?si=344bcbe0170c4022"
+                    icon={SiSpotify}
+                    tooltip="Spotify"
+                  />
+                  <IconLink
+                    href="https://www.linkedin.com/in/magueth-pastor-b40851284/"
+                    icon={SiLinkedin}
+                    tooltip="LinkedIn"
+                  />
+                </div>
+              </div>
+              <div className="home-tilt-container">
+                <TiltStack />
+              </div>
+              <div className="hhome-about-section-stack"></div>
             </div>
-          </div>
-          <div className="home-tilt-container">
-            <TiltStack />
-          </div>
-          <div className="hhome-about-section-stack"></div>
+          )}
         </div>
         <div className="h-full">
-          <div className="home-carousel-container" data-aos="fade-up">
-            <EmblaCarousel slides={slides} />
+          <div ref={carouselRef}>
+            {showCarousel && (
+              <div className="home-carousel-container" data-aos="fade-up">
+                <EmblaCarousel slides={slides} />
+              </div>
+            )}
           </div>
         </div>
       </div>
