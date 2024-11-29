@@ -35,6 +35,8 @@ const config: Config = {
         "infinite-scroll": "scroll 20s linear infinite", // Ajouté ici
         marquee: "marquee var(--duration) linear infinite", // Ajouté ici
         "marquee-vertical": "marquee-vertical var(--duration) linear infinite", // Ajouté ici
+        scroll2:
+          "scroll2 var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite", // Ajouté ici
       },
       keyframes: {
         aurora: {
@@ -56,7 +58,6 @@ const config: Config = {
           },
         },
         scroll: {
-          // Ajouté ici
           "0%": { transform: "translateX(0)" },
           "100%": { transform: "translateX(-100%)" },
         },
@@ -67,6 +68,11 @@ const config: Config = {
         "marquee-vertical": {
           from: { transform: "translateY(0)" }, // Ajouté ici
           to: { transform: "translateY(calc(-100% - var(--gap)))" }, // Ajouté ici
+        },
+        scroll2: {
+          to: {
+            transform: "translate(calc(-50% - 0.5rem))",
+          },
         },
       },
     },

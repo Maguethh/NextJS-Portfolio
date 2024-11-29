@@ -12,6 +12,7 @@ import {
   IconNewSection,
   IconTerminal2,
   IconBrandDiscord,
+  IconMessage,
 } from "@tabler/icons-react";
 
 export const metadata: Metadata = {
@@ -35,9 +36,9 @@ const links = [
     href: "#projects",
   },
   {
-    title: "Stack",
+    title: "Testimonials",
     icon: (
-      <IconExchange className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      <IconMessage className="h-full w-full text-neutral-500 dark:text-neutral-300" />
     ),
     href: "#stack",
   },
