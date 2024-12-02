@@ -75,6 +75,13 @@ const testimonials = [
     title: "CTO at Koesio",
   },
   {
+    comment: "A very pleasant collaboration.",
+    quote:
+      "Magueth is an exceptional team member. Autonomous, meticulous, and dynamic, he exceeded expectations in the short time we worked together. I was truly impressed and regret that we didn’t have more opportunities to collaborate. I highly recommend him.",
+    name: "Bastien",
+    title: "Director at Prune Web Agency",
+  },
+  {
     comment: "Highly satisfied with the results.",
     quote:
       "I regularly rely on Magueth for my e-commerce platforms. His speed, quality of work, and responsiveness are outstanding. I highly recommend him !",
