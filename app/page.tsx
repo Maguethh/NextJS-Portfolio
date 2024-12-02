@@ -77,7 +77,7 @@ const testimonials = [
   {
     comment: "A very pleasant collaboration.",
     quote:
-      "Magueth is an exceptional team member. Autonomous, meticulous, and dynamic, he exceeded expectations in the short time we worked together. I was truly impressed and regret that we didn’t have more opportunities to collaborate. I highly recommend him.",
+      "Magueth is an exceptional team member. Autonomous, meticulous, and dynamic, he exceeded expectations in the short time we worked together. I highly recommend him.",
     name: "Bastien",
     title: "Director at Prune Web Agency",
   },
