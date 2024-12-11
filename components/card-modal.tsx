@@ -79,4 +79,6 @@ const CardModal: React.FC<ModalProps> = ({ isOpen, onClose, slide }) => {
   );
 };
 
+
+
 export default CardModal;
