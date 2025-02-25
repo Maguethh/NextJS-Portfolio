@@ -95,6 +95,13 @@ const testimonials = [
     name: "Nicolas",
     title: "Director at Kometa Web Agency",
   },
+  {
+    comment: "Top quality work.",
+    quote:
+      "Magueth flawlessly integrated my franchise’s custom website design with precision and efficiency. His perfectionism and availability made all the difference. Highly recommended!",
+    name: "David",
+    title: "Owner - Made In Italy",
+  },
 ];
 
 export default function Home() {
@@ -231,7 +238,6 @@ export default function Home() {
             )}
           </div>
         </div>
-        <LogoCarousel />
       </div>
     </>
   );
